@@ -1,10 +1,21 @@
-import { ThemeProvider } from '@material-ui/core';
+import { CssBaseline, ThemeProvider } from '@material-ui/core';
+
+import Navbar from './components/Navbar';
+import Player from './components/Player';
+import Routes from './config/Routes';
+import theme from './theme';
+
+import './App.css'
 
 function App() {
   return (
     <div>
       <ThemeProvider theme={ theme }>
-        <Home />
+        <CssBaseline>
+          <Navbar />
+          <Routes />
+          <Player />
+        </CssBaseline>
       </ThemeProvider>
     </div>
   );

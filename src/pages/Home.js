@@ -1,20 +1,11 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Player from '../components/Player'
-
-
 
 const Home = () => {
   return (
     <div>
-      <Navbar />
-      <Header />
-      <About />
-      <Projects />
-      <Contact />
-      <Player />
+      <h1>Hey!</h1>
     </div>
   )
 }
 
-export default Home
+export default Home;
