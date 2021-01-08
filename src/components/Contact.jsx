@@ -1,7 +1,9 @@
-import { Paper, Typography } from '@material-ui/core'
-import React from 'react'
+import { Paper, Typography } from '@material-ui/core';
+import React, { useState } from 'react';
 
 const Contact = () => {
+  const [state, setState] = useState();
+
   return (
     <div>
       <Paper>
@@ -19,7 +21,7 @@ const Contact = () => {
         </Typography>
       </Paper>
     </div>
-  )
-}
+  );
+};
 
 export default Contact;
