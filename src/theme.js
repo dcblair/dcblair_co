@@ -8,7 +8,7 @@ const theme = createMuiTheme({
     type: 'dark',
     primary: {
       main: '#F0EBD8',
-      mainGradient: 'linear-gradient(to right, #3E5C76, #0D1321)',
+      mainGradient: 'linear-gradient(to left, #A9C8DA, #7EADC8)',
     },
   },
   root: {
@@ -24,6 +24,7 @@ const theme = createMuiTheme({
     h5: {
       fontFamily: noto,
       fontWeight: 600,
+      color: '#000',
     },
     h6: {
 
@@ -34,7 +35,7 @@ const theme = createMuiTheme({
       root: {
         color: '#000',
         textTransform: 'none',
-        textDecoration: 'none',
+        underline: 'none',
         borderRadius: 10,
         fontFamily: noto,
         fontSize: 16,
@@ -43,10 +44,16 @@ const theme = createMuiTheme({
     },
     MuiCard: {
       root: {
-        elevation: 1,
+        elevation: 3,
         margin: 'auto',
-        background: 'linear-gradient(to right, #3E5C76, #0D1321)',
+        background: 'linear-gradient(to left, #A9C8DA, #7EADC8)',
         borderRadius: 19,
+      },
+    },
+    MuiLink: {
+      root: {
+        textDecoration: 'none',
+        color: '#fff',
       },
     },
   },

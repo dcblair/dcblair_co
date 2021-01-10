@@ -12,12 +12,14 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   appBar: {
-    height: 40,
+    height: 45,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'linear-gradient(to right, #3E5C76, #A1B9CE, #3E5C76)',
-    // backgroundColor: '#78A1BB',
+    background: 'linear-gradient(to right, #7EADC8, #A1B9CE, #7EADC8)',
+  },
+  link: {
+    textDecoration: 'none',
   },
 }));
 
@@ -30,22 +32,22 @@ const Navbar = () => {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <Link to="/" style={{ marginRight: 40 }}>
+          <Link to="/" className={classes.link} style={{ marginRight: 40 }}>
             <Button>
               Home
             </Button>
           </Link>
-          <Link to="/About" style={{ marginRight: 40 }}>
+          <Link to="/About" className={classes.link} style={{ marginRight: 40 }}>
             <Button>
               About
             </Button>
           </Link>
-          <Link to="/Projects" style={{ marginRight: 40 }}>
+          <Link to="/Projects" className={classes.link} style={{ marginRight: 40 }}>
             <Button>
               Projects
             </Button>
           </Link>
-          <Link to="/Contact">
+          <Link to="/Contact" className={classes.link}>
             <Button>
               Contact
             </Button>
