@@ -1,5 +1,6 @@
 import { createMuiTheme } from '@material-ui/core';
 
+// eslint-disable-next-line quotes
 const noto = "'Noto Sans JP', sans-serif";
 
 const theme = createMuiTheme({
