@@ -1,29 +1,44 @@
 import {
   AppBar,
   Button,
+  makeStyles,
   Toolbar,
 } from '@material-ui/core';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    alignItems: 'center',
+  },
+  appBar: {
+    height: 40,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+}));
+
 const Navbar = () => {
+  const classes = useStyles();
+
   const [beans, setBeans] = useState();
 
   return (
-    <div>
-      <AppBar position="static">
+    <div className={classes.root}>
+      <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <Link to="/">
+          <Link to="/" style={{ marginRight: 40 }}>
             <Button>
               Home
             </Button>
           </Link>
-          <Link to="/About">
+          <Link to="/About" style={{ marginRight: 40 }}>
             <Button>
               About
             </Button>
           </Link>
-          <Link to="/Projects">
+          <Link to="/Projects" style={{ marginRight: 40 }}>
             <Button>
               Projects
             </Button>

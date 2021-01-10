@@ -6,6 +6,10 @@ const noto = "'Noto Sans JP', sans-serif";
 const theme = createMuiTheme({
   palette: {
     type: 'dark',
+    primary: {
+      main: '#F0EBD8',
+      mainGradient: 'linear-gradient(to right, #3E5C76, #0D1321)',
+    },
   },
   root: {
     justifyContent: 'center',
@@ -30,7 +34,10 @@ const theme = createMuiTheme({
       root: {
         color: '#000',
         textTransform: 'none',
-        fontFamily: 'Helvetica',
+        textDecoration: 'none',
+        borderRadius: 10,
+        fontFamily: noto,
+        fontSize: 16,
         fontWeight: 600,
       },
     },
@@ -38,6 +45,7 @@ const theme = createMuiTheme({
       root: {
         elevation: 1,
         margin: 'auto',
+        background: 'linear-gradient(to right, #3E5C76, #0D1321)',
       },
     },
   },
