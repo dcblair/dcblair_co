@@ -46,6 +46,7 @@ const theme = createMuiTheme({
         elevation: 1,
         margin: 'auto',
         background: 'linear-gradient(to right, #3E5C76, #0D1321)',
+        borderRadius: 19,
       },
     },
   },

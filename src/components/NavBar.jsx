@@ -16,6 +16,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    background: 'linear-gradient(to right, #3E5C76, #A1B9CE, #3E5C76)',
+    // backgroundColor: '#78A1BB',
   },
 }));
 
