@@ -7,13 +7,16 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Cuneiform from '../assets/an.png';
+import GreyScale from '../assets/greyscaleicon.png';
 
 const useStyles = makeStyles({
   root: {
     maxWidth: 600,
   },
   media: {
-    height: 140,
+    height: 70,
+    width: 70,
   },
   cune: {
     marginTop: 15,
@@ -37,7 +40,7 @@ const Projects = () => {
             </Typography>
             <CardMedia
               className={classes.media}
-              image="../assets/an.png"
+              image={Cuneiform}
               title="Cuneiform icon"
             />
             <Typography variant="body2" color="textSecondary" component="p">
@@ -63,7 +66,7 @@ const Projects = () => {
             </Typography>
             <CardMedia
               className={classes.media}
-              image="../assets/greyscaleicon.png"
+              image={GreyScale}
               title="greyscale icon"
             />
             <Typography variant="body2" color="textSecondary" component="p">
