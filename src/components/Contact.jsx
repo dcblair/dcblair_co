@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Paper, Typography } from '@material-ui/core';
+import { Card, Link, Typography } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <div>
-      <Paper>
+      <Card>
         <Typography variant="h5" component="h1">
           Contact
         </Typography>
@@ -28,7 +28,7 @@ const Contact = () => {
             <GitHubIcon />
           </Typography>
         </Link>
-      </Paper>
+      </Card>
     </div>
   );
 };

@@ -7,7 +7,8 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
   },
   card: {
-    // background: theme.palette.primary.mainGradient,
+    maxWidth: 600,
+    padding: theme.spacing(4),
   },
 }));
 

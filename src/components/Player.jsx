@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core';
+import { IconButton, makeStyles } from '@material-ui/core';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline';
-
-import './components.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    marginLeft: theme.spacing(12),
   },
   icons: {
-    height: 60,
-    width: 60,
+    color: '#9f8687',
+    opacity: '.5',
+    height: 50,
+    width: 50,
   },
 }));
 
@@ -25,9 +24,13 @@ const Player = () => {
   return (
     <div className={classes.root}>
       { isPlaying ? (
-        <PauseCircleOutlineIcon className={classes.icons} onClick={() => setIsPlaying(false)} />
+        <IconButton>
+          <PauseCircleOutlineIcon className={classes.icons} onClick={() => setIsPlaying(false)} />
+        </IconButton>
       ) : (
-        <PlayCircleOutlineIcon className={classes.icons} onClick={() => setIsPlaying(true)} />
+        <IconButton>
+          <PlayCircleOutlineIcon className={classes.icons} onClick={() => setIsPlaying(true)} />
+        </IconButton>
       )}
     </div>
   );

@@ -5,10 +5,11 @@ const noto = "'Noto Sans JP', sans-serif";
 
 const theme = createMuiTheme({
   palette: {
-    type: 'dark',
+    // type: 'dark',
     primary: {
       main: '#F0EBD8',
       mainGradient: 'linear-gradient(to left, #A9C8DA, #7EADC8)',
+      contrastText: '#000',
     },
   },
   root: {
@@ -46,14 +47,8 @@ const theme = createMuiTheme({
       root: {
         elevation: 3,
         margin: 'auto',
-        background: 'linear-gradient(to left, #A9C8DA, #7EADC8)',
-        borderRadius: 19,
-      },
-    },
-    MuiLink: {
-      root: {
-        textDecoration: 'none',
-        color: '#fff',
+        background: 'rgba(210, 231, 253, .3)',
+        borderRadius: 12,
       },
     },
   },
