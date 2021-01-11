@@ -17,11 +17,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 600,
     textAlign: 'left',
-    padding: 20,
+    padding: theme.spacing(5),
   },
   media: {
-    height: 70,
-    width: 70,
+    height: 60,
+    width: 60,
   },
   cune: {
     marginTop: theme.spacing(6),
@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
   cardTop: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'space-evenly',
   },
   repoButtons: {
     display: 'flex',
@@ -121,12 +122,12 @@ const Projects = () => {
           </CardContent>
         </CardActionArea>
         <Card className={classes.repoButtons}>
-          <Button onClick={() => window.open('https://github.com/dcblair/greyscale-frontend', '_blank')}>
+          <Button onClick={() => window.open('https://github.com/dcblair/greyscale_frontend', '_blank')}>
             <Typography variant="body1" component="p">
               Frontend
             </Typography>
           </Button>
-          <Button onClick={() => window.open('https://github.com/dcblair/greyscale-backend', '_blank')}>
+          <Button onClick={() => window.open('https://github.com/dcblair/greyscale_backend', '_blank')}>
             <Typography variant="body1" component="p">
               Backend
             </Typography>

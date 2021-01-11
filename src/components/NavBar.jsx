@@ -93,7 +93,7 @@ const Navbar = () => {
             </Button>
           </Link>
           <Link to="/Projects" className={`${classes.link} ${classes.projects}`}>
-            <Button>
+            <Button className={classes.projecct}>
               Projects
             </Button>
           </Link>

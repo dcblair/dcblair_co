@@ -1,14 +1,29 @@
 import React, { useState } from 'react';
-import { Card, Link, Typography } from '@material-ui/core';
+import {
+  Card,
+  Link,
+  makeStyles,
+  Typography,
+} from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+  },
+  card: {
+    maxWidth: 600,
+  },
+}));
+
 const Contact = () => {
+  const classes = useStyles();
+
   const [state, setState] = useState();
 
   return (
-    <div>
-      <Card>
+    <div className={classes.root}>
+      <Card className={classes.card}>
         <Typography variant="h5" component="h1">
           Contact
         </Typography>
