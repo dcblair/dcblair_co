@@ -1,14 +1,15 @@
+/* eslint-disable quotes */
 import { createMuiTheme } from '@material-ui/core';
 
-// eslint-disable-next-line quotes
 const noto = "'Noto Sans JP', sans-serif";
+const nunito = "'Nunito', sans-serif";
 
 const theme = createMuiTheme({
   palette: {
-    type: 'dark',
     primary: {
-      main: '#F0EBD8',
+      main: '#000',
       mainGradient: 'linear-gradient(to left, #A9C8DA, #7EADC8)',
+      contrastText: '#000',
     },
   },
   root: {
@@ -18,6 +19,12 @@ const theme = createMuiTheme({
     textAlign: 'center',
   },
   typography: {
+    h1: {
+      fontFamily: nunito,
+      weight: 900,
+      textShadow: '-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000',
+      color: 'rgba(210, 231, 253, 1.1)',
+    },
     h4: {
       fontFamily: noto,
     },
@@ -25,18 +32,28 @@ const theme = createMuiTheme({
       fontFamily: noto,
       fontWeight: 600,
       color: '#000',
+      textDecoration: 'underline',
     },
     h6: {
 
+    },
+    body1: {
+      color: '#000',
+      fontFamily: noto,
+      fontSize: 16,
+    },
+    body2: {
+      fontSize: 15,
     },
   },
   overrides: {
     MuiButton: {
       root: {
-        color: '#000',
+        color: '#001829',
         textTransform: 'none',
+        opacity: '.8',
         underline: 'none',
-        borderRadius: 10,
+        borderRadius: 11,
         fontFamily: noto,
         fontSize: 16,
         fontWeight: 600,
@@ -46,14 +63,8 @@ const theme = createMuiTheme({
       root: {
         elevation: 3,
         margin: 'auto',
-        background: 'linear-gradient(to left, #A9C8DA, #7EADC8)',
-        borderRadius: 19,
-      },
-    },
-    MuiLink: {
-      root: {
-        textDecoration: 'none',
-        color: '#fff',
+        background: 'rgba(210, 231, 253, .3)',
+        borderRadius: 12,
       },
     },
   },
