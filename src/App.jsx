@@ -36,12 +36,6 @@ const useStyles = makeStyles(({
     height: 50,
     width: 50,
   },
-  // previous: {
-  //   textAlign: 'right',
-  // },
-  // next: {
-  //   textAlign: 'left',
-  // },
 }));
 
 function App() {
@@ -56,18 +50,8 @@ function App() {
               <Navbar className={classes.nav} />
             </Grid>
             <Grid container className={classes.navigate}>
-              <Grid item xs={3} className={classes.previous}>
-                {/* <IconButton>
-                  <NavigateBeforeIcon className={classes.navigateIcons} />
-                </IconButton> */}
-              </Grid>
               <Grid item xs={12}>
                 <Routes />
-              </Grid>
-              <Grid item xs={3} className={classes.next}>
-                {/* <IconButton>
-                  <NavigateNextIcon className={classes.navigateIcons} />
-                </IconButton> */}
               </Grid>
             </Grid>
             <Grid item xs={12}>

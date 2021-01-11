@@ -12,6 +12,10 @@ const useStyles = makeStyles((theme) => ({
     opacity: '.5',
     height: 50,
     width: 50,
+    hover: {
+      color: '#000',
+      opacity: '1',
+    },
   },
 }));
 

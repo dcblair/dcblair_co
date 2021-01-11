@@ -19,6 +19,11 @@ const theme = createMuiTheme({
     textAlign: 'center',
   },
   typography: {
+    h1: {
+      weight: 800,
+      textShadow: '-2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000',
+      color: 'rgba(210, 231, 253, .3)',
+    },
     h4: {
       fontFamily: noto,
     },
@@ -30,14 +35,23 @@ const theme = createMuiTheme({
     h6: {
 
     },
+    body1: {
+      color: '#000',
+      fontFamily: noto,
+      fontSize: 16,
+    },
+    body2: {
+      fontSize: 15,
+    },
   },
   overrides: {
     MuiButton: {
       root: {
-        color: '#000',
+        color: '#001829',
         textTransform: 'none',
+        opacity: '.8',
         underline: 'none',
-        borderRadius: 10,
+        borderRadius: 11,
         fontFamily: noto,
         fontSize: 16,
         fontWeight: 600,

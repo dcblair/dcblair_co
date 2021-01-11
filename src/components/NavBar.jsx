@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     minWidth: '100vw',
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(2),
     height: 55,
     display: 'flex',
     justifyContent: 'center',
