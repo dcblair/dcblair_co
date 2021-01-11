@@ -7,11 +7,10 @@ import {
   makeStyles,
   ThemeProvider,
 } from '@material-ui/core';
-// import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
-// import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 import Navbar from './components/NavBar';
-import Player from './components/Player';
+// import Player from './components/Player';
+import Footer from './components/Footer';
 import Routes from './config/Routes';
 import theme from './theme';
 
@@ -36,6 +35,14 @@ const useStyles = makeStyles(({
     height: 50,
     width: 50,
   },
+  // player: {
+  //   position: 'fixed',
+  //   bottom: '2rem',
+  // },
+  footer: {
+    bottom: 0,
+    position: 'fixed',
+  },
 }));
 
 function App() {
@@ -54,8 +61,11 @@ function App() {
                 <Routes />
               </Grid>
             </Grid>
-            <Grid item xs={12}>
+            {/* <Grid item className={classes.player}>
               <Player />
+            </Grid> */}
+            <Grid item xs={12} className={classes.footer}>
+              <Footer />
             </Grid>
           </Grid>
         </CssBaseline>

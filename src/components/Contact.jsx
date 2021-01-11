@@ -1,25 +1,57 @@
 import React, { useState } from 'react';
 import {
+  Button,
   Card,
+  Grid,
   Link,
   makeStyles,
+  TextField,
   Typography,
 } from '@material-ui/core';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles((theme) => ({
   root: {
   },
   card: {
-    maxWidth: 600,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: theme.spacing(5),
+    maxWidth: 700,
+  },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  textField: {
+    [theme.breakpoints.down('sm')]: {
+      width: '70vw',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: 450,
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '30vw',
+    },
+  },
+  email: {
+    marginTop: theme.spacing(3),
+    justifyContent: 'left',
+  },
+  emailBody: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
   },
 }));
 
 const Contact = () => {
   const classes = useStyles();
 
-  const [state, setState] = useState();
+  const [email, setEmail] = useState('');
+  const [body, setBody] = useState('');
+
+  const handleSubmit = () => {
+  };
 
   return (
     <div className={classes.root}>
@@ -27,22 +59,33 @@ const Contact = () => {
         <Typography variant="h5" component="h1">
           Contact
         </Typography>
-        <Typography variant="h6" component="h2">
-          Email
-        </Typography>
-        <Link href="https://linkedin.com/in/devin-blair" target="_blank">
-          <Typography variant="h6" component="h2">
-            LinkedIn
-            <LinkedInIcon />
-          </Typography>
-        </Link>
-        <Link href="https://github.com/dcblair" target="_blank">
-          <Typography variant="h6" component="h2">
-            GitHub
-            {' '}
-            <GitHubIcon />
-          </Typography>
-        </Link>
+        <form
+          onSubmit={handleSubmit}
+          className={`${classes.form} ${classes.textField}`}
+        >
+          <TextField
+            className={classes.email}
+            value={email}
+            variant="filled"
+            id="email-textfield"
+            label="email adress"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextField
+            className={classes.emailBody}
+            inputProps={classes.inputText}
+            value={body}
+            variant="filled"
+            id="email-body-textfield"
+            label="message"
+            multiline
+            rows={8}
+            onChange={(e) => setBody(e.target.value)}
+          />
+          <Button>
+            Submit
+          </Button>
+        </form>
       </Card>
     </div>
   );
