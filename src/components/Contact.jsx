@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import {
   Button,
   Card,
-  Grid,
-  Link,
   makeStyles,
   TextField,
   Typography,
@@ -50,7 +49,16 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [body, setBody] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // axios({
+    //   method: 'POST',
+    //   url: process.env.CP_API_TOKEN,
+    //   data: bodyFormData,
+    //   headers: { 'Content-Type': 'multipart/form-data' },
+    //   })
+    // });
   };
 
   return (

@@ -52,14 +52,20 @@ const About = () => {
       <Avatar className={classes.profile} src={Profile} />
       <Card className={classes.card}>
         <Typography variant="body1" component="p">
+          Hello! My name is Devin. I am a software engineer from Los Angeles, California.
           I believe in writing clean, ethical code that provides users of all
           backgrounds an aesthetically pleasing, accessible experience.
           Serving the needs of others, as best as I can, is what drives me to code. I
           also greatly enjoy picking up new technologies to improve my workflow and
           unlock new skills. My experience teaching music production and English have
           helped me develop an eye for debugging— from grading papers, based on syntax
-          and formatting, to teaching music students multiple ways to solve the same issue
-          in their music production software.
+          and formatting, to teaching music production students multiple ways to troubleshoot,
+          as it is always vital to have a backup solution.
+
+          Languages: JavaScript, HTML5, CSS3, Python
+          Libraries and Frameworks: React.js, Node.js, Express.js, Material-UI, Bootstrap,
+          Sequelize, Flask
+          Other: RESTful Routing JSON, Git, PostgreSQL, AJAX
         </Typography>
       </Card>
     </div>
