@@ -18,15 +18,15 @@ const useStyles = makeStyles((theme) => ({
   profile: {
     [theme.breakpoints.down('sm')]: {
       marginBottom: theme.spacing(2),
-      marginTop: theme.spacing(13),
+      marginTop: theme.spacing(2),
     },
     [theme.breakpoints.up('md')]: {
       marginBottom: theme.spacing(5),
-      marginTop: theme.spacing(6),
+      marginTop: theme.spacing(3),
     },
     [theme.breakpoints.up('lg')]: {
       marginBottom: theme.spacing(6),
-      marginTop: theme.spacing(6),
+      marginTop: theme.spacing(1),
     },
     border: '1px solid #dffeff',
     width: 200,
@@ -34,8 +34,16 @@ const useStyles = makeStyles((theme) => ({
   },
   card: {
     maxWidth: 700,
-    padding: theme.spacing(8),
+    whiteSpace: 'pre-line',
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    paddingLeft: theme.spacing(5),
+    paddingRight: theme.spacing(5),
+    marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(0),
+    },
   },
   media: {
     height: 70,
@@ -66,8 +74,10 @@ const About = () => {
         </Typography>
         <Typography className={classes.lowerText} variant="body1" component="p">
           Languages: JavaScript, HTML5, CSS3, Python
+          {'\n'}
           Libraries and Frameworks: React.js, Node.js, Express.js, Material-UI, Bootstrap,
           Sequelize, Flask
+          {'\n'}
           Other: RESTful Routing JSON, Git, PostgreSQL, AJAX
         </Typography>
       </Card>
