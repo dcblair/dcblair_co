@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
   Button,
   Card,
-  CardActions,
   CardActionArea,
   CardContent,
   CardMedia,
@@ -18,17 +17,22 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 600,
     textAlign: 'left',
     padding: theme.spacing(5),
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(3),
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing(0),
+    },
   },
   media: {
     height: 60,
     width: 60,
   },
   cune: {
-    marginTop: theme.spacing(6),
+    marginTop: theme.spacing(1),
     marginBottom: theme.spacing(5),
   },
   grey: {
-    marginTop: theme.spacing(4),
+    marginTop: theme.spacing(1),
   },
   cardTop: {
     display: 'flex',

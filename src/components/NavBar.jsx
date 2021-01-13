@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     background: 'rgba(226, 254, 254, .2)',
   },
+  scrollAppBar: {
+    background: 'rgba(226, 254, 254, .9)',
+  },
   link: {
     textDecoration: 'none',
   },
@@ -28,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       marginLeft: 'auto',
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       marginLeft: 'auto',
       marginRight: '3rem',
     },
@@ -38,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   about: {
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       marginLeft: 'auto',
       marginRight: '1.5rem',
     },
@@ -48,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   projects: {
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       marginLeft: '1.5rem',
       marginRight: 'auto',
     },
@@ -58,10 +61,10 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   contact: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
       marginRight: 'auto',
     },
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       marginLeft: '3rem',
       marginRight: 'auto',
     },
@@ -77,6 +80,13 @@ const Navbar = () => {
   const classes = useStyles();
 
   const [beans, setBeans] = useState();
+
+  const handleScroll = (e) => {
+    const el = e.target;
+    if (el.scrollHeight - el.scrollTop === el.clientHeight) {
+      classes.appBar += classes.scrollAppBar;
+    }
+  };
 
   return (
     <div className={classes.root}>

@@ -15,22 +15,42 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: theme.spacing(5),
-    maxWidth: 700,
+    paddingTop: theme.spacing(5),
+    paddingBottom: theme.spacing(5),
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
+    [theme.breakpoints.down('xs')]: {
+      width: '100vw',
+    },
+    [theme.breakpoints.up('sm')]: {
+      width: '87vw',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '64vw',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '40vw',
+    },
+  },
+  text: {
+    marginBottom: theme.spacing(1),
   },
   form: {
     display: 'flex',
     flexDirection: 'column',
   },
   textField: {
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('xs')]: {
+      width: '80vw',
+    },
+    [theme.breakpoints.up('sm')]: {
       width: '70vw',
     },
     [theme.breakpoints.up('md')]: {
-      width: 450,
+      width: '54vw',
     },
     [theme.breakpoints.up('lg')]: {
-      width: '30vw',
+      width: '34vw',
     },
   },
   email: {
@@ -56,6 +76,7 @@ const Contact = () => {
     //   method: 'POST',
     //   url: process.env.CP_API_TOKEN,
     //   data: bodyFormData,
+    //   email: dblair@dcblair.co
     //   headers: { 'Content-Type': 'multipart/form-data' },
     //   })
     // });
@@ -64,7 +85,7 @@ const Contact = () => {
   return (
     <div className={classes.root}>
       <Card className={classes.card}>
-        <Typography variant="h5" component="h1">
+        <Typography className={classes.text} variant="h5" component="h1">
           Contact
         </Typography>
         <form
@@ -90,7 +111,7 @@ const Contact = () => {
             rows={8}
             onChange={(e) => setBody(e.target.value)}
           />
-          <Button>
+          <Button style={{ width: '20vw', alignSelf: 'center' }}>
             Submit
           </Button>
         </form>

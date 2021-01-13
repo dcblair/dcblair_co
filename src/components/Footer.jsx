@@ -14,20 +14,44 @@ const useStyles = makeStyles((theme) => ({
   },
   links: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     background: 'rgba(226, 254, 254, .5)',
-    marginTop: theme.spacing('1.5'),
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+    textAlign: 'center',
+    justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: theme.spacing('.5'),
+    },
+    [theme.breakpoints.up('md')]: {
+      marginBottom: theme.spacing('1.5'),
+      marginLeft: theme.spacing('.3'),
+    },
+  },
+  linkedLink: {
+    marginLeft: theme.spacing('-.1'),
   },
   linkedIn: {
-    width: 28,
-    height: 28,
+    [theme.breakpoints.down('sm')]: {
+      width: 34,
+      height: 34,
+    },
+    [theme.breakpoints.up('md')]: {
+      width: 29,
+      height: 29,
+    },
+    marginLeft: 6,
+    marginBottom: theme.spacing('.3'),
   },
-  // gitHub: {
-  //   marginLeft: '2rem',
-  //   justifyContent: 'space-between',
-  // },
+  gitHub: {
+    justifyContent: 'space-between',
+    [theme.breakpoints.down('sm')]: {
+      width: 28,
+      height: 28,
+    },
+    [theme.breakpoints.up('md')]: {
+      width: 24,
+      height: 24,
+    },
+  },
 }));
 
 const Footer = () => {
@@ -35,19 +59,23 @@ const Footer = () => {
 
   return (
     <div className={classes.root}>
-      <Grid className={classes.links}>
+      <Grid container className={classes.links}>
         <Link
           href="https://linkedin.com/in/devin-blair"
           target="_blank"
+          className={classes.linkedLink}
         >
           <LinkedInIcon className={classes.linkedIn} style={{ marginRight: '.2rem' }} />
         </Link>
         <Link
-          className={classes.gitHub}
           href="https://github.com/dcblair"
           target="_blank"
         >
-          <GitHubIcon fontSize="med" className={classes.icons} style={{ marginLeft: '.2rem' }} />
+          <GitHubIcon
+            className={classes.gitHub}
+            fontSize="med"
+            style={{ marginLeft: '.2rem' }}
+          />
         </Link>
       </Grid>
     </div>
