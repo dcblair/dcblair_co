@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     background: 'rgba(226, 254, 254, .2)',
   },
+  scrollAppBar: {
+    background: 'rgba(226, 254, 254, .9)',
+  },
   link: {
     textDecoration: 'none',
   },
@@ -77,6 +80,13 @@ const Navbar = () => {
   const classes = useStyles();
 
   const [beans, setBeans] = useState();
+
+  const handleScroll = (e) => {
+    const el = e.target;
+    if (el.scrollHeight - el.scrollTop === el.clientHeight) {
+      classes.appBar += classes.scrollAppBar;
+    }
+  };
 
   return (
     <div className={classes.root}>

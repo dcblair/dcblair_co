@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(6),
       marginTop: theme.spacing(6),
     },
-
     border: '1px solid #dffeff',
     width: 200,
     height: 200,
@@ -41,6 +40,9 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 70,
     width: 70,
+  },
+  lowerText: {
+    marginTop: theme.spacing(1),
   },
 }));
 
@@ -61,7 +63,8 @@ const About = () => {
           helped me develop an eye for debugging— from grading papers, based on syntax
           and formatting, to teaching music production students multiple ways to troubleshoot,
           as it is always vital to have a backup solution.
-
+        </Typography>
+        <Typography className={classes.lowerText} variant="body1" component="p">
           Languages: JavaScript, HTML5, CSS3, Python
           Libraries and Frameworks: React.js, Node.js, Express.js, Material-UI, Bootstrap,
           Sequelize, Flask

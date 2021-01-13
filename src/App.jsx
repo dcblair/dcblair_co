@@ -3,13 +3,14 @@ import React from 'react';
 import {
   CssBaseline,
   Grid,
-  IconButton,
   makeStyles,
   ThemeProvider,
+  Toolbar,
 } from '@material-ui/core';
 
 import Navbar from './components/NavBar';
 // import Player from './components/Player';
+import BackToTop from './components/BackToTop';
 import Footer from './components/Footer';
 import Routes from './config/Routes';
 import theme from './theme';
@@ -49,10 +50,11 @@ function App() {
   const classes = useStyles();
 
   return (
-    <div>
+    <div className={classes.root}>
       <ThemeProvider theme={theme}>
         <CssBaseline>
-          <Grid container className={classes.root}>
+          <Toolbar id="back-to-top-anchor" />
+          <Grid container>
             <Grid item xs={12}>
               <Navbar className={classes.nav} />
             </Grid>
@@ -67,6 +69,7 @@ function App() {
             <Grid item xs={12} className={classes.footer}>
               <Footer />
             </Grid>
+            <BackToTop />
           </Grid>
         </CssBaseline>
       </ThemeProvider>

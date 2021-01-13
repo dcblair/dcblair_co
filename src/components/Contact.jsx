@@ -56,6 +56,7 @@ const Contact = () => {
     //   method: 'POST',
     //   url: process.env.CP_API_TOKEN,
     //   data: bodyFormData,
+    //   email: dblair@dcblair.co
     //   headers: { 'Content-Type': 'multipart/form-data' },
     //   })
     // });
