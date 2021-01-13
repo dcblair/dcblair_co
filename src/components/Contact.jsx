@@ -111,7 +111,7 @@ const Contact = () => {
             rows={8}
             onChange={(e) => setBody(e.target.value)}
           />
-          <Button style={{ width: '20vw' }}>
+          <Button style={{ width: '20vw', alignSelf: 'center' }}>
             Submit
           </Button>
         </form>
