@@ -34,7 +34,7 @@ const BackToTop = () => {
   return (
     <Zoom in={trigger}>
       <div onClick={handleClick} role="presentation" className={classes.backtop}>
-        <Fab color="(gba(226, 254, 254, .2)">
+        <Fab background="(gba(226, 254, 254, .2)">
           <KeyboardArrowUpIcon />
         </Fab>
       </div>
