@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import emailjs from 'emailjs-com';
 import {
   Button,
   Card,
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   text: {
-    marginBottom: theme.spacing(1),
+    marginBottom: theme.spacing(3),
   },
   form: {
     display: 'flex',
@@ -65,21 +65,26 @@ const useStyles = makeStyles((theme) => ({
 
 const Contact = () => {
   const classes = useStyles();
-
+  const [isLoading, setIsLoading] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const [email, setEmail] = useState('');
   const [body, setBody] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // axios({
-    //   method: 'POST',
-    //   url: process.env.CP_API_TOKEN,
-    //   data: bodyFormData,
-    //   email: dblair@dcblair.co
-    //   headers: { 'Content-Type': 'multipart/form-data' },
-    //   })
-    // });
+    const service = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const template = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const userId = process.env.REACT_APP_EMAILJS_USER_ID;
+    const params = {
+      from_email: email,
+      message: body,
+    };
+    window.emailjs.send(service, template, params, userId)
+      .then(() => {
+        setIsLoading(false);
+        setFormSubmitted(true);
+      });
   };
 
   return (
@@ -88,33 +93,39 @@ const Contact = () => {
         <Typography className={classes.text} variant="h5" component="h1">
           Contact
         </Typography>
-        <form
-          onSubmit={handleSubmit}
-          className={`${classes.form} ${classes.textField}`}
-        >
-          <TextField
-            className={classes.email}
-            value={email}
-            variant="filled"
-            id="email-textfield"
-            label="email adress"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <TextField
-            className={classes.emailBody}
-            inputProps={classes.inputText}
-            value={body}
-            variant="filled"
-            id="email-body-textfield"
-            label="message"
-            multiline
-            rows={8}
-            onChange={(e) => setBody(e.target.value)}
-          />
-          <Button style={{ width: '20vw', alignSelf: 'center' }}>
-            Submit
-          </Button>
-        </form>
+        { formSubmitted ? (
+          <Typography variant="h6" component="h1">
+            You message has been sent!
+          </Typography>
+        ) : (
+          <form className={`${classes.form} ${classes.textField}`}>
+            <TextField
+              className={classes.email}
+              value={email}
+              variant="filled"
+              id="email-textfield"
+              label="email address"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <TextField
+              className={classes.emailBody}
+              inputProps={classes.inputText}
+              value={body}
+              variant="filled"
+              id="email-body-textfield"
+              label="message"
+              multiline
+              rows={8}
+              onChange={(e) => setBody(e.target.value)}
+            />
+            <Button
+              onClick={handleSubmit}
+              style={{ width: '20vw', alignSelf: 'center' }}
+            >
+              Submit
+            </Button>
+          </form>
+        )}
       </Card>
     </div>
   );
