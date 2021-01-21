@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Avatar,
   Card,
+  IconButton,
   makeStyles,
   Typography,
 } from '@material-ui/core';

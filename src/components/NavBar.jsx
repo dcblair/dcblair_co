@@ -3,9 +3,11 @@ import {
   Button,
   makeStyles,
   Toolbar,
+  useScrollTrigger,
 } from '@material-ui/core';
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import ScrollHandler from './ScrollHandler';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,10 +21,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'rgba(226, 254, 254, .2)',
-  },
-  scrollAppBar: {
-    background: 'rgba(226, 254, 254, .9)',
+    background: 'rgba(226, 254, 254, .3)',
   },
   link: {
     textDecoration: 'none',
@@ -73,47 +72,44 @@ const useStyles = makeStyles((theme) => ({
       marginRight: 'auto',
     },
   },
-
 }));
 
 const Navbar = () => {
   const classes = useStyles();
 
-  const [beans, setBeans] = useState();
-
-  const handleScroll = (e) => {
-    const el = e.target;
-    if (el.scrollHeight - el.scrollTop === el.clientHeight) {
-      classes.appBar += classes.scrollAppBar;
-    }
+  const scrollToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   };
 
   return (
     <div className={classes.root}>
-      <AppBar className={classes.appBar}>
-        <Toolbar>
-          <Link to="/" className={`${classes.link} ${classes.home}`}>
-            <Button>
-              Home
-            </Button>
-          </Link>
-          <Link to="/About" className={`${classes.link} ${classes.about}`}>
-            <Button>
-              About
-            </Button>
-          </Link>
-          <Link to="/Projects" className={`${classes.link} ${classes.projects}`}>
-            <Button className={classes.projecct}>
-              Projects
-            </Button>
-          </Link>
-          <Link to="/Contact" className={`${classes.link} ${classes.contact}`}>
-            <Button>
-              Contact
-            </Button>
-          </Link>
-        </Toolbar>
-      </AppBar>
+      <ScrollHandler>
+        <AppBar className={classes.appBar}>
+          <Toolbar>
+            <Link to="/" className={`${classes.link} ${classes.home}`}>
+              <Button onClick={scrollToTop}>
+                Home
+              </Button>
+            </Link>
+            <Link to="/About" className={`${classes.link} ${classes.about}`}>
+              <Button onClick={scrollToTop}>
+                About
+              </Button>
+            </Link>
+            <Link to="/Projects" className={`${classes.link} ${classes.projects}`}>
+              <Button onClick={scrollToTop}>
+                Projects
+              </Button>
+            </Link>
+            <Link to="/Contact" className={`${classes.link} ${classes.contact}`}>
+              <Button onClick={scrollToTop}>
+                Contact
+              </Button>
+            </Link>
+          </Toolbar>
+        </AppBar>
+      </ScrollHandler>
     </div>
   );
 };
