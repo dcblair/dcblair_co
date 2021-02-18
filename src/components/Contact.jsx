@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(1),
     paddingRight: theme.spacing(1),
     [theme.breakpoints.down('xs')]: {
-      width: '100vw',
+      width: '95vw',
     },
     [theme.breakpoints.up('sm')]: {
       width: '87vw',

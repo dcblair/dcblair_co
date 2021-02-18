@@ -7,7 +7,7 @@ import {
   Typography,
 } from '@material-ui/core';
 
-import Profile from '../assets/profile_2.png';
+import Profile from '../assets/profile_3.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,7 +79,7 @@ const About = () => {
           Libraries and Frameworks: React.js, Node.js, Express.js, Material-UI, Bootstrap,
           Sequelize, Flask
           {'\n'}
-          Other: RESTful Routing JSON, Git, PostgreSQL, AJAX
+          Other: RESTful Routing JSON, Git, PostgreSQL, AJAX, Axios
         </Typography>
       </Card>
     </div>

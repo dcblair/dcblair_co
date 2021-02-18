@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
-    marginTop: theme.spacing('-15'),
+    marginTop: theme.spacing(-15),
   },
   name: {
     [theme.breakpoints.down('sm')]: {
