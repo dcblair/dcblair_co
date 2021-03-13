@@ -75,11 +75,13 @@ const About = () => {
         </Typography>
         <Typography className={classes.lowerText} variant="body1" component="p">
           Languages: JavaScript, HTML5, CSS3, Python
-          {'\n'}
+        </Typography>
+        <Typography className={classes.lowerText} variant="body1" component="p">
           Libraries and Frameworks: React.js, Node.js, Express.js, Material-UI, Bootstrap,
-          Sequelize, Flask
-          {'\n'}
-          Other: RESTful Routing JSON, Git, PostgreSQL, AJAX, Axios
+          React Spring, Sequelize, Jest, Enzyme
+        </Typography>
+        <Typography className={classes.lowerText} variant="body1" component="p">
+          Other: RESTful Routing JSON, Git, PostgreSQL, Axios
         </Typography>
       </Card>
     </div>
