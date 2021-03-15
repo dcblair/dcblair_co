@@ -5,7 +5,7 @@ import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: 'flex'
   },
   icons: {
     color: '#9f8687',
@@ -14,9 +14,9 @@ const useStyles = makeStyles((theme) => ({
     width: 50,
     hover: {
       color: '#000',
-      opacity: '1',
-    },
-  },
+      opacity: '1'
+    }
+  }
 }));
 
 const Player = () => {

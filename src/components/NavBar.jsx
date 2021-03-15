@@ -2,8 +2,7 @@ import {
   AppBar,
   Button,
   makeStyles,
-  Toolbar,
-  useScrollTrigger,
+  Toolbar
 } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -12,7 +11,7 @@ import ScrollHandler from './ScrollHandler';
 const useStyles = makeStyles((theme) => ({
   root: {
     alignItems: 'center',
-    marginBottom: theme.spacing(3),
+    marginBottom: theme.spacing(3)
   },
   appBar: {
     minWidth: '100vw',
@@ -21,57 +20,57 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'rgba(226, 254, 254, .3)',
+    background: 'rgba(226, 254, 254, .3)'
   },
   link: {
-    textDecoration: 'none',
+    textDecoration: 'none'
   },
   home: {
     [theme.breakpoints.down('sm')]: {
-      marginLeft: 'auto',
+      marginLeft: 'auto'
     },
     [theme.breakpoints.up('sm')]: {
       marginLeft: 'auto',
-      marginRight: '3rem',
+      marginRight: '3rem'
     },
     [theme.breakpoints.up('lg')]: {
       marginLeft: 'auto',
-      marginRight: '6rem',
-    },
+      marginRight: '6rem'
+    }
   },
   about: {
     [theme.breakpoints.up('sm')]: {
       marginLeft: 'auto',
-      marginRight: '1.5rem',
+      marginRight: '1.5rem'
     },
     [theme.breakpoints.up('lg')]: {
       marginLeft: 'auto',
-      marginRight: '3rem',
-    },
+      marginRight: '3rem'
+    }
   },
   projects: {
     [theme.breakpoints.up('sm')]: {
       marginLeft: '1.5rem',
-      marginRight: 'auto',
+      marginRight: 'auto'
     },
     [theme.breakpoints.up('lg')]: {
       marginLeft: '3rem',
-      marginRight: 'auto',
-    },
+      marginRight: 'auto'
+    }
   },
   contact: {
     [theme.breakpoints.down('xs')]: {
-      marginRight: 'auto',
+      marginRight: 'auto'
     },
     [theme.breakpoints.up('sm')]: {
       marginLeft: '3rem',
-      marginRight: 'auto',
+      marginRight: 'auto'
     },
     [theme.breakpoints.up('lg')]: {
       marginLeft: '6rem',
-      marginRight: 'auto',
-    },
-  },
+      marginRight: 'auto'
+    }
+  }
 }));
 
 const Navbar = () => {

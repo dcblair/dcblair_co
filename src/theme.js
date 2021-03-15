@@ -9,30 +9,30 @@ const theme = createMuiTheme({
     primary: {
       main: '#000',
       mainGradient: 'linear-gradient(to left, #A9C8DA, #7EADC8)',
-      contrastText: '#000',
-    },
+      contrastText: '#000'
+    }
   },
   root: {
     justifyContent: 'center',
     alignItems: 'center',
     margin: 'auto',
-    textAlign: 'center',
+    textAlign: 'center'
   },
   typography: {
     h1: {
       fontFamily: nunito,
       weight: 900,
       textShadow: '-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000',
-      color: 'rgba(210, 231, 253, 1.1)',
+      color: 'rgba(210, 231, 253, 1.1)'
     },
     h4: {
-      fontFamily: noto,
+      fontFamily: noto
     },
     h5: {
       fontFamily: noto,
       fontWeight: 600,
       color: '#000',
-      textDecoration: 'underline',
+      textDecoration: 'underline'
     },
     h6: {
 
@@ -40,11 +40,11 @@ const theme = createMuiTheme({
     body1: {
       color: '#000',
       fontFamily: noto,
-      fontSize: 16,
+      fontSize: 16
     },
     body2: {
-      fontSize: 15,
-    },
+      fontSize: 15
+    }
   },
   overrides: {
     MuiButton: {
@@ -56,18 +56,10 @@ const theme = createMuiTheme({
         borderRadius: 11,
         fontFamily: noto,
         fontSize: 16,
-        fontWeight: 600,
-      },
-    },
-    MuiCard: {
-      root: {
-        elevation: 3,
-        margin: 'auto',
-        background: 'rgba(210, 231, 253, .3)',
-        borderRadius: 12,
-      },
-    },
-  },
+        fontWeight: 600
+      }
+    }
+  }
 });
 
 export default theme;
