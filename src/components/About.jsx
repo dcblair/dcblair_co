@@ -6,9 +6,8 @@ import {
   Typography
 } from '@material-ui/core';
 
-import { a, useSpring } from 'react-spring';
-
-import Profile from '../assets/profile_3.png';
+import Profile from '../assets/profile_500.png';
+import FadeSpring from './FadeSpring';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,22 +65,12 @@ const useStyles = makeStyles((theme) => ({
 const About = () => {
   const classes = useStyles();
 
-  const fadeSpring = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { mass: 20, tension: 140, friction: 100 }
-  });
-
   return (
     <div className={classes.root}>
-      <a.div
-        style={fadeSpring}
-      >
+      <FadeSpring>
         <Avatar className={classes.profile} src={Profile} />
-      </a.div>
-      <a.div
-        style={fadeSpring}
-      >
+      </FadeSpring>
+      <FadeSpring>
         <Card className={classes.card}>
           <Typography variant="body1" component="p">
             Hello! My name is Devin. I am a software engineer from Los Angeles, California.
@@ -105,7 +94,7 @@ const About = () => {
             Other: RESTful Routing JSON, Git, PostgreSQL, Axios
           </Typography>
         </Card>
-      </a.div>
+      </FadeSpring>
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 
-import { a, useSpring } from 'react-spring';
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',

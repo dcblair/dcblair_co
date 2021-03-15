@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import { Card, makeStyles } from '@material-ui/core';
 
@@ -20,12 +18,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ProjectCard = (props) => {
+const ProjectCard = ({ children }) => {
   const classes = useStyles();
 
   return (
     <Card className={classes.card}>
-      {props.children}
+      {children}
     </Card>
   );
 };

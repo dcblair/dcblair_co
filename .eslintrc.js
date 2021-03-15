@@ -26,6 +26,7 @@ module.exports = {
     indent: ['error', 2],
     quotes: ['warn', 'single'],
     semi: ['warn', 'always'],
-    'comma-dangle': [2, 'never']
+    'comma-dangle': [2, 'never'],
+    'react/prop-types': 'off'
   }
 };

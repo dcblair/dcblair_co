@@ -10,9 +10,8 @@ import {
   Typography
 } from '@material-ui/core';
 
-import { a, useSpring } from 'react-spring';
-
 import ProjectCard from './ProjectCard';
+import FadeSpring from './FadeSpring';
 
 import Cuneiform from '../assets/an.png';
 import GreyScale from '../assets/greyscaleicon.png';
@@ -61,16 +60,8 @@ const useStyles = makeStyles((theme) => ({
 const Projects = () => {
   const classes = useStyles();
 
-  const cardFade = useSpring({
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: { mass: 10, tension: 180, friction: 160 }
-  });
-
   return (
-    <a.div
-      style={cardFade}
-    >
+    <FadeSpring>
       <ProjectCard className={[classes.root, classes.cune]}>
         <CardActionArea href="" target="_blank">
           <CardContent>
@@ -151,7 +142,7 @@ const Projects = () => {
           </Button>
         </Card>
       </ProjectCard>
-    </a.div>
+    </FadeSpring>
   );
 };
 
