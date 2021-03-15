@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Grid,
   Link,
-  makeStyles,
-  Typography,
+  makeStyles
 } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    position: 'sticky',
+    position: 'sticky'
   },
   links: {
     display: 'flex',
@@ -19,39 +18,39 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     justifyContent: 'center',
     [theme.breakpoints.down('sm')]: {
-      marginBottom: theme.spacing('.5'),
+      marginBottom: theme.spacing('.5')
     },
     [theme.breakpoints.up('md')]: {
       marginBottom: theme.spacing('1.5'),
-      marginLeft: theme.spacing('.3'),
-    },
+      marginLeft: theme.spacing('.3')
+    }
   },
   linkedLink: {
-    marginLeft: theme.spacing('-.1'),
+    marginLeft: theme.spacing('-.1')
   },
   linkedIn: {
     [theme.breakpoints.down('sm')]: {
       width: 34,
-      height: 34,
+      height: 34
     },
     [theme.breakpoints.up('md')]: {
       width: 29,
-      height: 29,
+      height: 29
     },
     marginLeft: 6,
-    marginBottom: theme.spacing('.3'),
+    marginBottom: theme.spacing('.3')
   },
   gitHub: {
     justifyContent: 'space-between',
     [theme.breakpoints.down('sm')]: {
       width: 28,
-      height: 28,
+      height: 28
     },
     [theme.breakpoints.up('md')]: {
       width: 24,
-      height: 24,
-    },
-  },
+      height: 24
+    }
+  }
 }));
 
 const Footer = () => {

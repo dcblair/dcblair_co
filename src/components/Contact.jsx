@@ -5,7 +5,7 @@ import {
   Card,
   makeStyles,
   TextField,
-  Typography,
+  Typography
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,47 +20,47 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(1),
     paddingRight: theme.spacing(1),
     [theme.breakpoints.down('xs')]: {
-      width: '95vw',
+      width: '95vw'
     },
     [theme.breakpoints.up('sm')]: {
-      width: '87vw',
+      width: '87vw'
     },
     [theme.breakpoints.up('md')]: {
-      width: '64vw',
+      width: '64vw'
     },
     [theme.breakpoints.up('lg')]: {
-      width: '40vw',
-    },
+      width: '40vw'
+    }
   },
   text: {
-    marginBottom: theme.spacing(3),
+    marginBottom: theme.spacing(3)
   },
   form: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column'
   },
   textField: {
     [theme.breakpoints.down('xs')]: {
-      width: '80vw',
+      width: '80vw'
     },
     [theme.breakpoints.up('sm')]: {
-      width: '70vw',
+      width: '70vw'
     },
     [theme.breakpoints.up('md')]: {
-      width: '54vw',
+      width: '54vw'
     },
     [theme.breakpoints.up('lg')]: {
-      width: '34vw',
-    },
+      width: '34vw'
+    }
   },
   email: {
     marginTop: theme.spacing(3),
-    justifyContent: 'left',
+    justifyContent: 'left'
   },
   emailBody: {
     marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(3),
-  },
+    marginBottom: theme.spacing(3)
+  }
 }));
 
 const Contact = () => {
@@ -78,7 +78,7 @@ const Contact = () => {
     const userId = process.env.REACT_APP_EMAILJS_USER_ID;
     const params = {
       from_email: email,
-      message: body,
+      message: body
     };
     window.emailjs.send(service, template, params, userId)
       .then(() => {

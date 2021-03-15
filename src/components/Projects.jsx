@@ -7,58 +7,71 @@ import {
   CardContent,
   CardMedia,
   Grid,
-  Typography,
+  Typography
 } from '@material-ui/core';
+
+import { a, useSpring } from 'react-spring';
+
+import ProjectCard from './ProjectCard';
+
 import Cuneiform from '../assets/an.png';
 import GreyScale from '../assets/greyscaleicon.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 600,
+    width: 600,
     textAlign: 'left',
     padding: theme.spacing(5),
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(3),
     [theme.breakpoints.down('sm')]: {
-      marginBottom: theme.spacing(0),
-    },
+      marginBottom: theme.spacing(0)
+    }
   },
   media: {
     height: 60,
-    width: 60,
+    width: 60
   },
   cune: {
     marginTop: theme.spacing(1),
-    marginBottom: theme.spacing(5),
+    marginBottom: theme.spacing(5)
   },
   grey: {
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(1)
   },
   cardTop: {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-evenly'
   },
   repoButtons: {
     display: 'flex',
     justifyContent: 'space-evenly',
     borderRadius: 8,
     padding: theme.spacing('.3'),
-    background: 'rgba(210, 231, 253, 0)',
+    background: 'rgba(210, 231, 253, 0)'
   },
   text: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(2),
-    letterSpacing: '.03rem',
-  },
+    letterSpacing: '.03rem'
+  }
 }));
 
 const Projects = () => {
   const classes = useStyles();
 
+  const cardFade = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { mass: 10, tension: 180, friction: 160 }
+  });
+
   return (
-    <div>
-      <Card className={`${classes.root} ${classes.cune}`}>
+    <a.div
+      style={cardFade}
+    >
+      <ProjectCard className={[classes.root, classes.cune]}>
         <CardActionArea href="" target="_blank">
           <CardContent>
             <Grid container className={classes.cardTop}>
@@ -98,8 +111,8 @@ const Projects = () => {
             </Typography>
           </Button>
         </Card>
-      </Card>
-      <Card className={`${classes.root} ${classes.grey}`}>
+      </ProjectCard>
+      <ProjectCard className={[classes.root, classes.grey]}>
         <CardActionArea href="https://greyscale-music.herokuapp.com/" target="_blank">
           <CardContent>
             <Grid container className={classes.cardTop}>
@@ -137,8 +150,8 @@ const Projects = () => {
             </Typography>
           </Button>
         </Card>
-      </Card>
-    </div>
+      </ProjectCard>
+    </a.div>
   );
 };
 

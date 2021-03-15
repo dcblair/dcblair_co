@@ -6,24 +6,24 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
-    marginTop: theme.spacing(-15),
+    marginTop: theme.spacing(-15)
   },
   name: {
     [theme.breakpoints.down('sm')]: {
       letterSpacing: '.5rem',
       mixBlendMode: 'exclusion',
-      fontSize: 65,
+      fontSize: 65
     },
     [theme.breakpoints.up('md')]: {
       letterSpacing: '1rem',
       mixBlendMode: 'exclusion',
-      fontSize: 72,
+      fontSize: 72
     },
     [theme.breakpoints.up('lg')]: {
       letterSpacing: '2rem',
       mixBlendMode: 'exclusion',
-      fontSize: 80,
-    },
+      fontSize: 80
+    }
   },
   title: {
     marginTop: theme.spacing(6),
@@ -32,17 +32,17 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       letterSpacing: '.2rem',
       mixBlendMode: 'exclusion',
-      fontSize: 26,
+      fontSize: 26
     },
     [theme.breakpoints.up('md')]: {
       mixBlendMode: 'exclusion',
-      fontSize: 37,
+      fontSize: 37
     },
     [theme.breakpoints.up('lg')]: {
       mixBlendMode: 'overlay',
-      fontSize: 40,
-    },
-  },
+      fontSize: 40
+    }
+  }
 }));
 
 const Home = () => {

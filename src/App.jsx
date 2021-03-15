@@ -5,7 +5,7 @@ import {
   Grid,
   makeStyles,
   ThemeProvider,
-  Toolbar,
+  Toolbar
 } from '@material-ui/core';
 
 import Navbar from './components/NavBar';
@@ -26,15 +26,15 @@ const useStyles = makeStyles(({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundImage: `url(${Background})`,
-    minHeight: '100vh',
+    minHeight: '100vh'
   },
   navigate: {
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   navigateIcons: {
     height: 50,
-    width: 50,
+    width: 50
   },
   // player: {
   //   position: 'fixed',
@@ -42,8 +42,8 @@ const useStyles = makeStyles(({
   // },
   footer: {
     bottom: 0,
-    position: 'fixed',
-  },
+    position: 'fixed'
+  }
 }));
 
 function App() {
