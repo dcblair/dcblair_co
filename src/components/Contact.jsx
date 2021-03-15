@@ -8,6 +8,8 @@ import {
   Typography
 } from '@material-ui/core';
 
+import FadeSpring from './FadeSpring';
+
 const useStyles = makeStyles((theme) => ({
   root: {
   },
@@ -91,7 +93,7 @@ const Contact = () => {
   };
 
   return (
-    <div className={classes.root}>
+    <FadeSpring>
       <Card className={classes.card}>
         <Typography className={classes.text} variant="h5" component="h1">
           Contact
@@ -130,7 +132,7 @@ const Contact = () => {
           </form>
         )}
       </Card>
-    </div>
+    </FadeSpring>
   );
 };
 
