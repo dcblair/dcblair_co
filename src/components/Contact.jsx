@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    margin: 'auto',
+    background: 'rgba(210, 231, 253, .1)',
+    borderRadius: 25,
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(5),
     paddingLeft: theme.spacing(1),
@@ -23,10 +26,10 @@ const useStyles = makeStyles((theme) => ({
       width: '95vw'
     },
     [theme.breakpoints.up('sm')]: {
-      width: '87vw'
+      width: '60vw'
     },
     [theme.breakpoints.up('md')]: {
-      width: '64vw'
+      width: '58vw'
     },
     [theme.breakpoints.up('lg')]: {
       width: '40vw'
@@ -44,10 +47,10 @@ const useStyles = makeStyles((theme) => ({
       width: '80vw'
     },
     [theme.breakpoints.up('sm')]: {
-      width: '70vw'
+      width: '50vw'
     },
     [theme.breakpoints.up('md')]: {
-      width: '54vw'
+      width: '48vw'
     },
     [theme.breakpoints.up('lg')]: {
       width: '34vw'
