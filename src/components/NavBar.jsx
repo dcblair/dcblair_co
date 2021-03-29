@@ -91,17 +91,17 @@ const Navbar = () => {
                 Home
               </Button>
             </Link>
-            <Link to="/About" className={`${classes.link} ${classes.about}`}>
+            <Link to="/about" className={`${classes.link} ${classes.about}`}>
               <Button onClick={scrollToTop}>
                 About
               </Button>
             </Link>
-            <Link to="/Projects" className={`${classes.link} ${classes.projects}`}>
+            <Link to="/projects" className={`${classes.link} ${classes.projects}`}>
               <Button onClick={scrollToTop}>
                 Projects
               </Button>
             </Link>
-            <Link to="/Contact" className={`${classes.link} ${classes.contact}`}>
+            <Link to="/contact" className={`${classes.link} ${classes.contact}`}>
               <Button onClick={scrollToTop}>
                 Contact
               </Button>
