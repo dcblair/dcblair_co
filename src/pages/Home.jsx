@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     marginTop: theme.spacing(6),
-    textShadow: '-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000',
+    textShadow: '-2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000',
     color: 'rgba(210, 231, 253, 1.2)',
     [theme.breakpoints.down('sm')]: {
       letterSpacing: '.2rem',

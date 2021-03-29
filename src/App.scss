@@ -4,17 +4,17 @@
 $background: './assets/portfolio2048x1152.png';
 
 html {
-  background-image: url($background);
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   height: 100%;
   overflow: hidden;
   scroll-behavior: smooth;
 }
 
 body {
+  background-image: url($background);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   overflow: auto;
   height: 100%;
 }
