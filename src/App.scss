@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;900&display=swap');
+
+$background: './assets/portfolio2048x1152.png';
+
+html {
+  background-image: url($background);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
+}
