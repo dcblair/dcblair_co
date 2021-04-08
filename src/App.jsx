@@ -15,9 +15,9 @@ import Footer from './components/Footer';
 import Routes from './config/Routes';
 import theme from './theme';
 
-import Background from './assets/portfoliobg.png';
+import background from './assets/portfolio2048x1152.png';
 
-import './App.css';
+// import './App.scss';
 
 const useStyles = makeStyles(({
   root: {
@@ -25,8 +25,13 @@ const useStyles = makeStyles(({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage: `url(${Background})`,
-    minHeight: '100vh'
+    backgroundImage: `url(${background})`,
+    backgroundSize: 'cover',
+    WebkitbackgroundSize: 'cover',
+    MozbackgroundSize: 'cover',
+    OBackgroundSize: 'cover',
+    height: '100vh',
+    width: '100vw'
   },
   navigate: {
     alignItems: 'center',

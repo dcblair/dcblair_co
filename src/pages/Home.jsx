@@ -6,7 +6,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
-    marginTop: theme.spacing(-15)
+    height: '100%'
+    // marginTop: theme.spacing(-15)
   },
   name: {
     [theme.breakpoints.down('sm')]: {
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     marginTop: theme.spacing(6),
-    textShadow: '-1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000',
+    textShadow: '-2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000',
     color: 'rgba(210, 231, 253, 1.2)',
     [theme.breakpoints.down('sm')]: {
       letterSpacing: '.2rem',
@@ -39,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 37
     },
     [theme.breakpoints.up('lg')]: {
-      mixBlendMode: 'overlay',
+      color: 'rgba(220, 252, 255)',
       fontSize: 40
     }
   }

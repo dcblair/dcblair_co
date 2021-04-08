@@ -18,7 +18,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     margin: 'auto',
+    backdropFilter: 'blur(3px)',
     background: 'rgba(210, 231, 253, .1)',
+    boxShadow: '6px 7px 8px 0px rgba(122, 89, 82, 0.2)',
     borderRadius: 25,
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(5),
@@ -44,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column'
   },
-  textField: {
+  textFields: {
     [theme.breakpoints.down('xs')]: {
       width: '80vw'
     },
@@ -57,6 +59,10 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('lg')]: {
       width: '34vw'
     }
+  },
+  inputs: {
+    borderRadius: theme.spacing(2),
+    backgroundColor: 'rgba(0, 0, 0, 0.08)'
   },
   email: {
     marginTop: theme.spacing(3),
@@ -103,20 +109,25 @@ const Contact = () => {
             You message has been sent!
           </Typography>
         ) : (
-          <form className={`${classes.form} ${classes.textField}`}>
+          <form className={`${classes.form} ${classes.textFields}`}>
             <TextField
               className={classes.email}
               value={email}
-              variant="filled"
+              variant="outlined"
               id="email-textfield"
               label="email address"
+              InputProps={{
+                className: classes.inputs
+              }}
               onChange={(e) => setEmail(e.target.value)}
             />
             <TextField
               className={classes.emailBody}
-              inputProps={classes.inputText}
+              InputProps={{
+                className: classes.inputs
+              }}
               value={body}
-              variant="filled"
+              variant="outlined"
               id="email-body-textfield"
               label="message"
               multiline

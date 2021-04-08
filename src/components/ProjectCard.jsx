@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
     elevation: 1,
     margin: 'auto',
     background: 'rgba(210, 231, 253, .1)',
+    boxShadow: '6px 7px 8px 0px rgba(122, 89, 82, 0.2)',
     borderRadius: 25,
     textAlign: 'left',
     padding: theme.spacing(5),
