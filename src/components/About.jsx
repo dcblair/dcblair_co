@@ -57,8 +57,12 @@ const useStyles = makeStyles((theme) => ({
     height: 70,
     width: 70
   },
+  parText: {
+    marginBottom: theme.spacing(0.7)
+  },
   lowerText: {
-    marginTop: theme.spacing(1)
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1)
   }
 }));
 
@@ -72,13 +76,18 @@ const About = () => {
       </FadeSpring>
       <FadeSpring>
         <Card className={classes.card}>
-          <Typography variant="body1" component="p">
+          <Typography className={classes.parText} variant="body1" component="p">
             Hello! My name is Devin. I am a software engineer from Los Angeles, California.
             I believe in writing clean, ethical code that provides users of all
             backgrounds an aesthetically pleasing, accessible experience.
+          </Typography>
+          <Typography className={classes.parText} variant="body1" component="p">
             Serving the needs of others, as best as I can, is what drives me to code. I
             also greatly enjoy picking up new technologies to improve my workflow and
-            unlock new skills. My experience teaching music production and English have
+            unlock new skills.
+          </Typography>
+          <Typography className={classes.parText} variant="body1" component="p">
+            My experience teaching music production and English have
             helped me develop an eye for debugging— from grading papers, based on syntax
             and formatting, to teaching music production students multiple ways to troubleshoot,
             as it is always vital to have a backup solution.
