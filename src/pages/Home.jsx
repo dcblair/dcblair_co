@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 37
     },
     [theme.breakpoints.up('lg')]: {
-      mixBlendMode: 'overlay',
+      color: 'rgba(220, 252, 255)',
       fontSize: 40
     }
   }
