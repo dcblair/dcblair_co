@@ -35,12 +35,12 @@ const theme = createMuiTheme({
       textDecoration: 'underline'
     },
     h6: {
-
+      fontSize: '1.1rem'
     },
     body1: {
       color: '#000',
       fontFamily: noto,
-      fontSize: 16
+      fontSize: '0.9rem'
     },
     body2: {
       fontSize: 15

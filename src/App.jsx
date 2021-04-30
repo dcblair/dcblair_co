@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
   CssBaseline,
   Grid,
@@ -7,16 +5,14 @@ import {
   ThemeProvider,
   Toolbar
 } from '@material-ui/core';
-
-import Navbar from './components/NavBar';
+import React from 'react';
+import background from './assets/portfolio2048x1152.png';
 // import Player from './components/Player';
 import BackToTop from './components/BackToTop';
 import Footer from './components/Footer';
+import Navbar from './components/NavBar';
 import Routes from './config/Routes';
 import theme from './theme';
-
-import background from './assets/portfolio2048x1152.png';
-
 // import './App.scss';
 
 const useStyles = makeStyles(({
