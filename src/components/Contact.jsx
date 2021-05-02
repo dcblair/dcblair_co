@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import {
   Button,
   Card,
+  Grid,
   makeStyles,
   TextField,
   Typography
@@ -12,28 +13,36 @@ import FadeSpring from './FadeSpring';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-  },
-  card: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center'
+  },
+  card: {
+    display: 'flex',
     margin: 'auto',
+    flexDirection: 'column',
+    verticalAlign: 'center',
+    alignItems: 'center',
     backdropFilter: 'blur(3px)',
     background: 'rgba(210, 231, 253, .1)',
     boxShadow: '6px 7px 8px 0px rgba(122, 89, 82, 0.2)',
     borderRadius: 25,
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(5),
-    paddingLeft: theme.spacing(1),
-    paddingRight: theme.spacing(1),
+    paddingLeft: theme.spacing(5),
+    paddingRight: theme.spacing(5),
     [theme.breakpoints.down('xs')]: {
-      width: '95vw'
+      width: '95vw',
+      marginTop: theme.spacing(0)
     },
     [theme.breakpoints.up('sm')]: {
-      width: '60vw'
+      width: '60vw',
+      marginTop: theme.spacing(13)
     },
     [theme.breakpoints.up('md')]: {
-      width: '58vw'
+      width: '58vw',
+      marginTop: theme.spacing(15)
     },
     [theme.breakpoints.up('lg')]: {
       width: '40vw'
@@ -66,7 +75,7 @@ const useStyles = makeStyles((theme) => ({
   },
   email: {
     marginTop: theme.spacing(3),
-    justifyContent: 'left'
+    textAlign: 'left'
   },
   emailBody: {
     marginTop: theme.spacing(3),
@@ -91,59 +100,60 @@ const Contact = () => {
       from_email: email,
       message: body
     };
-    window.emailjs.send(service, template, params, userId)
-      .then(() => {
-        setIsLoading(false);
-        setFormSubmitted(true);
-      });
+    window.emailjs.send(service, template, params, userId).then(() => {
+      setIsLoading(false);
+      setFormSubmitted(true);
+    });
   };
 
   return (
-    <FadeSpring>
-      <Card className={classes.card}>
-        <Typography className={classes.text} variant="h5" component="h1">
-          Contact
-        </Typography>
-        { formSubmitted ? (
-          <Typography variant="h6" component="h1">
-            You message has been sent!
+    <Grid className={classes.root}>
+      <FadeSpring>
+        <Card className={classes.card}>
+          <Typography className={classes.text} variant="h5" component="h1">
+            Contact
           </Typography>
-        ) : (
-          <form className={`${classes.form} ${classes.textFields}`}>
-            <TextField
-              className={classes.email}
-              value={email}
-              variant="outlined"
-              id="email-textfield"
-              label="email address"
-              InputProps={{
-                className: classes.inputs
-              }}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <TextField
-              className={classes.emailBody}
-              InputProps={{
-                className: classes.inputs
-              }}
-              value={body}
-              variant="outlined"
-              id="email-body-textfield"
-              label="message"
-              multiline
-              rows={8}
-              onChange={(e) => setBody(e.target.value)}
-            />
-            <Button
-              onClick={handleSubmit}
-              style={{ width: '20vw', alignSelf: 'center' }}
-            >
-              Submit
-            </Button>
-          </form>
-        )}
-      </Card>
-    </FadeSpring>
+          {formSubmitted ? (
+            <Typography variant="h6" component="h1">
+              Your message has been sent!
+            </Typography>
+          ) : (
+            <form className={`${classes.form} ${classes.textFields}`}>
+              <TextField
+                className={classes.email}
+                value={email}
+                variant="outlined"
+                id="email-textfield"
+                label="email address"
+                InputProps={{
+                  className: classes.inputs
+                }}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              <TextField
+                className={classes.emailBody}
+                InputProps={{
+                  className: classes.inputs
+                }}
+                value={body}
+                variant="outlined"
+                id="email-body-textfield"
+                label="message"
+                multiline
+                rows={8}
+                onChange={(e) => setBody(e.target.value)}
+              />
+              <Button
+                onClick={handleSubmit}
+                style={{ width: '20vw', alignSelf: 'center' }}
+              >
+                Submit
+              </Button>
+            </form>
+          )}
+        </Card>
+      </FadeSpring>
+    </Grid>
   );
 };
 
