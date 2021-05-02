@@ -6,10 +6,17 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     textAlign: 'center',
+    justifyContent: 'center',
+    positon: 'relative',
+    alignItems: 'center',
     height: '100%'
-    // marginTop: theme.spacing(-15)
+  },
+  text: {
+    position: 'absolute',
+    top: '50%'
   },
   name: {
+    marginTop: theme.spacing(-20),
     [theme.breakpoints.down('sm')]: {
       letterSpacing: '.5rem',
       mixBlendMode: 'exclusion',
@@ -27,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   title: {
-    marginTop: theme.spacing(6),
+    // marginTop: theme.spacing(6),
     textShadow: '-2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000',
     color: 'rgba(210, 231, 253, 1.2)',
     [theme.breakpoints.down('sm')]: {
@@ -50,16 +57,22 @@ const Home = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Grid>
-        <Typography className={classes.name} variant="h1" component="h1">
-          Devin Blair
-        </Typography>
-        <Typography className={classes.title} variant="h4" component="h2">
-          Software Engineer
-        </Typography>
-      </Grid>
-    </div>
+    <Grid container className={classes.root}>
+      <Typography
+        className={[classes.name, classes.text]}
+        variant="h1"
+        component="h1"
+      >
+        Devin Blair
+      </Typography>
+      <Typography
+        className={[classes.title, classes.text]}
+        variant="h4"
+        component="h2"
+      >
+        Software Engineer
+      </Typography>
+    </Grid>
   );
 };
 

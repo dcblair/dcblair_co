@@ -6,26 +6,18 @@ import {
   Toolbar
 } from '@material-ui/core';
 import React from 'react';
-import background from './assets/portfolio2048x1152.png';
 // import Player from './components/Player';
 import BackToTop from './components/BackToTop';
 import Footer from './components/Footer';
 import Navbar from './components/NavBar';
 import Routes from './config/Routes';
 import theme from './theme';
-// import './App.scss';
+import './App.scss';
 
 const useStyles = makeStyles({
   root: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundImage: `url(${background})`,
-    backgroundSize: 'cover',
-    WebkitbackgroundSize: 'cover',
-    MozbackgroundSize: 'cover',
-    OBackgroundSize: 'cover'
+    flexDirection: 'column'
   },
   navigate: {
     alignItems: 'center',

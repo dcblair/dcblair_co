@@ -5,8 +5,8 @@ import ScrollHandler from './ScrollHandler';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    alignItems: 'center'
-    // marginBottom: theme.spacing(3)
+    alignItems: 'center',
+    marginBottom: theme.spacing(3)
   },
   appBar: {
     minWidth: '100vw',
@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'rgba(218, 247, 253, 0.4)'
+    background: 'rgba(226, 254, 254, .3)'
   },
   link: {
     textDecoration: 'none'
