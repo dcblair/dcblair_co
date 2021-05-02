@@ -1,26 +1,20 @@
-import {
-  AppBar,
-  Button,
-  makeStyles,
-  Toolbar
-} from '@material-ui/core';
+import { AppBar, Button, makeStyles, Toolbar } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ScrollHandler from './ScrollHandler';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    alignItems: 'center',
-    marginBottom: theme.spacing(3)
+    alignItems: 'center'
+    // marginBottom: theme.spacing(3)
   },
   appBar: {
     minWidth: '100vw',
-    marginTop: theme.spacing(1),
     height: 55,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'rgba(226, 254, 254, .3)'
+    background: 'rgba(218, 247, 253, 0.4)'
   },
   link: {
     textDecoration: 'none'
@@ -87,24 +81,22 @@ const Navbar = () => {
         <AppBar className={classes.appBar}>
           <Toolbar>
             <Link to="/" className={`${classes.link} ${classes.home}`}>
-              <Button onClick={scrollToTop}>
-                Home
-              </Button>
+              <Button onClick={scrollToTop}>Home</Button>
             </Link>
             <Link to="/about" className={`${classes.link} ${classes.about}`}>
-              <Button onClick={scrollToTop}>
-                About
-              </Button>
+              <Button onClick={scrollToTop}>About</Button>
             </Link>
-            <Link to="/projects" className={`${classes.link} ${classes.projects}`}>
-              <Button onClick={scrollToTop}>
-                Projects
-              </Button>
+            <Link
+              to="/projects"
+              className={`${classes.link} ${classes.projects}`}
+            >
+              <Button onClick={scrollToTop}>Projects</Button>
             </Link>
-            <Link to="/contact" className={`${classes.link} ${classes.contact}`}>
-              <Button onClick={scrollToTop}>
-                Contact
-              </Button>
+            <Link
+              to="/contact"
+              className={`${classes.link} ${classes.contact}`}
+            >
+              <Button onClick={scrollToTop}>Contact</Button>
             </Link>
           </Toolbar>
         </AppBar>

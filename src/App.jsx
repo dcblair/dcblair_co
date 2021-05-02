@@ -15,7 +15,7 @@ import Routes from './config/Routes';
 import theme from './theme';
 // import './App.scss';
 
-const useStyles = makeStyles(({
+const useStyles = makeStyles({
   root: {
     display: 'flex',
     flexDirection: 'column',
@@ -25,9 +25,7 @@ const useStyles = makeStyles(({
     backgroundSize: 'cover',
     WebkitbackgroundSize: 'cover',
     MozbackgroundSize: 'cover',
-    OBackgroundSize: 'cover',
-    height: '100vh',
-    width: '100vw'
+    OBackgroundSize: 'cover'
   },
   navigate: {
     alignItems: 'center',
@@ -45,7 +43,7 @@ const useStyles = makeStyles(({
     bottom: 0,
     position: 'fixed'
   }
-}));
+});
 
 function App() {
   const classes = useStyles();
