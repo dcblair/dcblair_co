@@ -134,8 +134,8 @@ const About = () => {
             variant="body1"
             component="p"
           >
-            React.js, Node.js, Express.js, Material-UI, Bootstrap, React Spring,
-            Sequelize, Jest, Enzyme, GraphQL, Apollo
+            Express.js, Material-UI, Bootstrap, React Spring, Sequelize, Jest,
+            Enzyme, GraphQL, Apollo
           </Typography>
           <Typography className={classes.lowerText} variant="h6" component="h3">
             Other
