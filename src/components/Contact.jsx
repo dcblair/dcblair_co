@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import {
+  Box,
   Button,
   Card,
   Grid,
@@ -16,13 +17,22 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%'
+  },
+  cardBox: {
+    [theme.breakpoints.down('xs')]: {
+      marginTop: theme.spacing(2)
+    },
+    [theme.breakpoints.up('sm')]: {
+      marginTop: theme.spacing(9)
+    }
   },
   card: {
     display: 'flex',
     margin: 'auto',
     flexDirection: 'column',
-    verticalAlign: 'center',
     alignItems: 'center',
     backdropFilter: 'blur(3px)',
     background: 'rgba(210, 231, 253, .1)',
@@ -33,16 +43,13 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(5),
     paddingRight: theme.spacing(5),
     [theme.breakpoints.down('xs')]: {
-      width: '95vw',
-      marginTop: theme.spacing(0)
+      width: '95vw'
     },
     [theme.breakpoints.up('sm')]: {
-      width: '60vw',
-      marginTop: theme.spacing(13)
+      width: '60vw'
     },
     [theme.breakpoints.up('md')]: {
-      width: '58vw',
-      marginTop: theme.spacing(15)
+      width: '58vw'
     },
     [theme.breakpoints.up('lg')]: {
       width: '40vw'
@@ -108,51 +115,53 @@ const Contact = () => {
 
   return (
     <Grid className={classes.root}>
-      <FadeSpring>
-        <Card className={classes.card}>
-          <Typography className={classes.text} variant="h5" component="h1">
-            Contact
-          </Typography>
-          {formSubmitted ? (
-            <Typography variant="h6" component="h1">
-              Your message has been sent!
+      <Box className={classes.cardBox}>
+        <FadeSpring>
+          <Card className={classes.card}>
+            <Typography className={classes.text} variant="h5" component="h1">
+              Contact
             </Typography>
-          ) : (
-            <form className={`${classes.form} ${classes.textFields}`}>
-              <TextField
-                className={classes.email}
-                value={email}
-                variant="outlined"
-                id="email-textfield"
-                label="email address"
-                InputProps={{
-                  className: classes.inputs
-                }}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <TextField
-                className={classes.emailBody}
-                InputProps={{
-                  className: classes.inputs
-                }}
-                value={body}
-                variant="outlined"
-                id="email-body-textfield"
-                label="message"
-                multiline
-                rows={8}
-                onChange={(e) => setBody(e.target.value)}
-              />
-              <Button
-                onClick={handleSubmit}
-                style={{ width: '20vw', alignSelf: 'center' }}
-              >
-                Submit
-              </Button>
-            </form>
-          )}
-        </Card>
-      </FadeSpring>
+            {formSubmitted ? (
+              <Typography variant="h6" component="h1">
+                Your message has been sent!
+              </Typography>
+            ) : (
+              <form className={`${classes.form} ${classes.textFields}`}>
+                <TextField
+                  className={classes.email}
+                  value={email}
+                  variant="outlined"
+                  id="email-textfield"
+                  label="email address"
+                  InputProps={{
+                    className: classes.inputs
+                  }}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <TextField
+                  className={classes.emailBody}
+                  InputProps={{
+                    className: classes.inputs
+                  }}
+                  value={body}
+                  variant="outlined"
+                  id="email-body-textfield"
+                  label="message"
+                  multiline
+                  rows={8}
+                  onChange={(e) => setBody(e.target.value)}
+                />
+                <Button
+                  onClick={handleSubmit}
+                  style={{ width: '20vw', alignSelf: 'center' }}
+                >
+                  Submit
+                </Button>
+              </form>
+            )}
+          </Card>
+        </FadeSpring>
+      </Box>
     </Grid>
   );
 };
