@@ -1,6 +1,7 @@
-import { AppBar, Button, makeStyles, Toolbar } from '@material-ui/core';
+import { AppBar, makeStyles, Toolbar } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { noto } from '../theme';
 import ScrollHandler from './ScrollHandler';
 
 const useStyles = makeStyles((theme) => ({
@@ -17,7 +18,17 @@ const useStyles = makeStyles((theme) => ({
     background: 'rgba(226, 254, 254, .3)'
   },
   link: {
-    textDecoration: 'none'
+    fontFamily: noto,
+    color: 'rgba(0, 0, 0)',
+    fontWeight: 600,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.1rem'
+    },
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '1.2rem'
+    },
+    textDecoration: 'none',
+    letterSpacing: 1.8
   },
   home: {
     [theme.breakpoints.down('sm')]: {
@@ -70,33 +81,28 @@ const useStyles = makeStyles((theme) => ({
 const Navbar = () => {
   const classes = useStyles();
 
-  const scrollToTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  };
-
   return (
     <div className={classes.root}>
       <ScrollHandler>
         <AppBar className={classes.appBar}>
           <Toolbar>
             <Link to="/" className={`${classes.link} ${classes.home}`}>
-              <Button onClick={scrollToTop}>Home</Button>
+              Home
             </Link>
             <Link to="/about" className={`${classes.link} ${classes.about}`}>
-              <Button onClick={scrollToTop}>About</Button>
+              About
             </Link>
             <Link
               to="/projects"
               className={`${classes.link} ${classes.projects}`}
             >
-              <Button onClick={scrollToTop}>Projects</Button>
+              Projects
             </Link>
             <Link
               to="/contact"
               className={`${classes.link} ${classes.contact}`}
             >
-              <Button onClick={scrollToTop}>Contact</Button>
+              Contact
             </Link>
           </Toolbar>
         </AppBar>
