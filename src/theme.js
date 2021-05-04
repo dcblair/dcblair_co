@@ -49,11 +49,11 @@ const theme = createMuiTheme({
   overrides: {
     MuiButton: {
       root: {
-        color: '#001829',
+        backgroundColor: 'rgba(245, 253, 251, 0.34)',
+        boxShadow: '6px 7px 8px 0px rgba(122, 89, 82, 0.2)',
         textTransform: 'none',
-        opacity: '.8',
         underline: 'none',
-        borderRadius: 11,
+        borderRadius: 13,
         fontFamily: noto,
         fontSize: 16,
         fontWeight: 600
