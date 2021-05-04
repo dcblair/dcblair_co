@@ -23,6 +23,8 @@ module.exports = {
     semi: ['warn', 'always'],
     'comma-dangle': [2, 'never'],
     'react/prop-types': 'off',
-    'object-curly-newline': 0
+    'object-curly-newline': 0,
+    'react/jsx-curly-newline': 0,
+    'implicit-arrow-linebreak': 0
   }
 };

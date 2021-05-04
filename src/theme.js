@@ -1,8 +1,8 @@
 /* eslint-disable quotes */
 import { createMuiTheme } from '@material-ui/core';
 
-const noto = "'Noto Sans JP', sans-serif";
-const nunito = "'Nunito', sans-serif";
+export const noto = "'Noto Sans JP', sans-serif";
+export const nunito = "'Nunito', sans-serif";
 
 const theme = createMuiTheme({
   palette: {
@@ -31,8 +31,7 @@ const theme = createMuiTheme({
     h5: {
       fontFamily: noto,
       fontWeight: 600,
-      color: '#000',
-      textDecoration: 'underline'
+      color: '#000'
     },
     h6: {
       fontSize: '1.1rem'
