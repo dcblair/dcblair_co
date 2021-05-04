@@ -87,6 +87,10 @@ const useStyles = makeStyles((theme) => ({
   emailBody: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3)
+  },
+  submit: {
+    width: 120,
+    alignSelf: 'center'
   }
 }));
 
@@ -151,10 +155,7 @@ const Contact = () => {
                   rows={8}
                   onChange={(e) => setBody(e.target.value)}
                 />
-                <Button
-                  onClick={handleSubmit}
-                  style={{ width: '20vw', alignSelf: 'center' }}
-                >
+                <Button onClick={handleSubmit} className={classes.submit}>
                   Submit
                 </Button>
               </form>
