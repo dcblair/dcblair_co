@@ -1,4 +1,4 @@
-import { AppBar, makeStyles, Toolbar } from '@material-ui/core';
+import { AppBar, makeStyles, Toolbar, Typography } from '@material-ui/core';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { noto } from '../theme';
@@ -30,50 +30,19 @@ const useStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     letterSpacing: 1.8
   },
-  home: {
-    [theme.breakpoints.down('sm')]: {
-      marginLeft: 'auto'
+  break: {
+    fontWeight: 400,
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: '0.4rem',
+      marginRight: '0.4rem'
     },
     [theme.breakpoints.up('sm')]: {
-      marginLeft: 'auto',
-      marginRight: '3rem'
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginLeft: 'auto',
-      marginRight: '6rem'
-    }
-  },
-  about: {
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: 'auto',
+      marginLeft: '1.5rem',
       marginRight: '1.5rem'
     },
     [theme.breakpoints.up('lg')]: {
-      marginLeft: 'auto',
+      marginLeft: '3rem',
       marginRight: '3rem'
-    }
-  },
-  projects: {
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: '1.5rem',
-      marginRight: 'auto'
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginLeft: '3rem',
-      marginRight: 'auto'
-    }
-  },
-  contact: {
-    [theme.breakpoints.down('xs')]: {
-      marginRight: 'auto'
-    },
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: '3rem',
-      marginRight: 'auto'
-    },
-    [theme.breakpoints.up('lg')]: {
-      marginLeft: '6rem',
-      marginRight: 'auto'
     }
   }
 }));
@@ -89,15 +58,24 @@ const Navbar = () => {
             <Link to="/" className={`${classes.link} ${classes.home}`}>
               Home
             </Link>
+            <Typography variant="h5" component="h5" className={classes.break}>
+              |
+            </Typography>
             <Link to="/about" className={`${classes.link} ${classes.about}`}>
               About
             </Link>
+            <Typography variant="h5" component="h5" className={classes.break}>
+              |
+            </Typography>
             <Link
               to="/projects"
               className={`${classes.link} ${classes.projects}`}
             >
               Projects
             </Link>
+            <Typography variant="h5" component="h5" className={classes.break}>
+              |
+            </Typography>
             <Link
               to="/contact"
               className={`${classes.link} ${classes.contact}`}
