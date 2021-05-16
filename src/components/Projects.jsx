@@ -9,7 +9,7 @@ import {
   Typography
 } from '@material-ui/core';
 
-import ProjectCard from './ProjectCard';
+import ProjectCard from './ProjectCard.tsx';
 import FadeSpring from './FadeSpring';
 
 import Cuneiform from '../assets/an.png';

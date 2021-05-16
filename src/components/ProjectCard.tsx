@@ -19,14 +19,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ProjectCard = ({ children }) => {
+interface ProjectCardProps {
+  children: JSX.Element | null;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ children }) => {
   const classes = useStyles();
 
-  return (
-    <Card className={classes.card}>
-      {children}
-    </Card>
-  );
+  return <Card className={classes.card}>{children}</Card>;
 };
 
 export default ProjectCard;

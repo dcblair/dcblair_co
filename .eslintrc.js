@@ -23,6 +23,10 @@ module.exports = {
     semi: ['warn', 'always'],
     'comma-dangle': [2, 'never'],
     'react/prop-types': 'off',
+    'react/jsx-filename-extension': [
+      2,
+      { extensions: ['.tsx', '.ts', '.jsx', '.js'] }
+    ],
     'object-curly-newline': 0,
     'react/jsx-curly-newline': 0,
     'implicit-arrow-linebreak': 0
