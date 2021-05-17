@@ -13,22 +13,23 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    strict: ['error', 'safe'],
-    eqeqeq: 'error',
-    'no-console': 'warn',
-    'no-unused-vars': 'warn',
-    'no-eval': 'error',
-    indent: ['error', 2],
-    quotes: ['warn', 'single'],
-    semi: ['warn', 'always'],
     'comma-dangle': [2, 'never'],
-    'react/prop-types': 'off',
+    eqeqeq: 'error',
+    'implicit-arrow-linebreak': 0,
+    indent: ['error', 2],
+    'no-console': 'warn',
+    'no-eval': 'error',
+    'no-undef': 0,
+    'no-unused-vars': 'warn',
+    quotes: ['warn', 'single'],
+    'object-curly-newline': 0,
+    'react/jsx-curly-newline': 0,
     'react/jsx-filename-extension': [
       2,
       { extensions: ['.tsx', '.ts', '.jsx', '.js'] }
     ],
-    'object-curly-newline': 0,
-    'react/jsx-curly-newline': 0,
-    'implicit-arrow-linebreak': 0
+    'react/prop-types': 'off',
+    semi: ['warn', 'always'],
+    strict: ['error', 'safe']
   }
 };

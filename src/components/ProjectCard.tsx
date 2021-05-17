@@ -19,9 +19,10 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-interface ProjectCardProps {
-  children: JSX.Element | null;
-}
+type ProjectCardProps = {
+  // children: JSX.Element | JSX.Element[];
+  children: React.ReactNode;
+};
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ children }) => {
   const classes = useStyles();
