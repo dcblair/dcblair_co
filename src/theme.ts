@@ -1,23 +1,23 @@
 /* eslint-disable quotes */
-import { createMuiTheme } from '@material-ui/core';
+import { createMuiTheme, Theme } from '@material-ui/core';
 
 export const noto = "'Noto Sans JP', sans-serif";
 export const nunito = "'Nunito', sans-serif";
 
-const theme = createMuiTheme({
+const theme: Theme = createMuiTheme({
   palette: {
     primary: {
       main: '#000',
-      mainGradient: 'linear-gradient(to left, #A9C8DA, #7EADC8)',
+      // mainGradient: 'linear-gradient(to left, #A9C8DA, #7EADC8)',
       contrastText: '#000'
     }
   },
-  root: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: 'auto',
-    textAlign: 'center'
-  },
+  // root: {
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   margin: 'auto',
+  //   textAlign: 'center'
+  // },
   typography: {
     h1: {
       fontFamily: nunito,

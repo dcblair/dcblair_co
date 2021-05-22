@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, ReactNode } from 'react';
 import { Card, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,10 +21,11 @@ const useStyles = makeStyles((theme) => ({
 
 type ProjectCardProps = {
   // children: JSX.Element | JSX.Element[];
-  children: React.ReactNode;
+  children: ReactNode;
+  className: string[];
 };
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ children }) => {
+const ProjectCard: FC<ProjectCardProps> = ({ className, children }) => {
   const classes = useStyles();
 
   return <Card className={classes.card}>{children}</Card>;

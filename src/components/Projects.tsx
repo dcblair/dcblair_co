@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 import {
   Box,
   CardActionArea,
@@ -9,14 +9,14 @@ import {
   Typography
 } from '@material-ui/core';
 
-import ProjectCard from './ProjectCard.tsx';
+import ProjectCard from './ProjectCard';
 import FadeSpring from './FadeSpring';
 
 import Cuneiform from '../assets/an.png';
 import GreyScale from '../assets/greyscaleicon.png';
 import ProjectButton from './ProjectButton';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: 600,
     textAlign: 'left',
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-evenly',
     borderRadius: 8,
-    padding: theme.spacing('.3'),
+    padding: theme.spacing(0.3),
     background: 'rgba(210, 231, 253, 0)'
   },
   text: {

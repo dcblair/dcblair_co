@@ -1,12 +1,12 @@
-import { Button, makeStyles } from '@material-ui/core';
-import React from 'react';
+import { Button, makeStyles, Theme } from '@material-ui/core';
+import React, { FC, ReactNode } from 'react';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   button: {
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
     width: 120,
     fontSize: '0.9rem',
-    fontWeight: '400',
+    fontWeight: 400,
     letterSpacing: '0.06em',
     transition: '0.6s all',
     '&:hover': {
@@ -14,9 +14,14 @@ const useStyles = makeStyles((theme) => ({
       transition: '1.2s all ease-out'
     }
   }
-}));
+});
 
-const ProjectButton = ({ link, children }) => {
+interface IProps {
+  link: string;
+  children: ReactNode;
+}
+
+const ProjectButton: FC<IProps> = ({ link, children }) => {
   const classes = useStyles();
 
   const handleClick = () => {
@@ -24,7 +29,7 @@ const ProjectButton = ({ link, children }) => {
   };
 
   return (
-    <Button className={classes.button} onClick={() => handleClick(link)}>
+    <Button className={classes.button} onClick={handleClick}>
       {children}
     </Button>
   );

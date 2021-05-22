@@ -1,5 +1,5 @@
 import { Avatar, Card, makeStyles, Typography } from '@material-ui/core';
-import React from 'react';
+import React, { FC } from 'react';
 import Profile from '../assets/profile_500.png';
 import FadeSpring from './FadeSpring';
 import FontawesomeButton from './FontawesomeButton';
@@ -61,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const About = () => {
+const About: FC = () => {
   const classes = useStyles();
 
   return (

@@ -3,7 +3,13 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: [
+    'airbnb',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
+    'plugin:react/recommended'
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -16,6 +22,16 @@ module.exports = {
     'comma-dangle': [2, 'never'],
     eqeqeq: 'error',
     'implicit-arrow-linebreak': 0,
+    'import/extensions': [
+      'error',
+      'always',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never'
+      }
+    ],
     indent: ['error', 2],
     'no-console': 'warn',
     'no-eval': 'error',
@@ -31,5 +47,12 @@ module.exports = {
     'react/prop-types': 'off',
     semi: ['warn', 'always'],
     strict: ['error', 'safe']
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+      }
+    }
   }
 };
