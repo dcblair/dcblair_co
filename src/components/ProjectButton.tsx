@@ -1,17 +1,20 @@
-import { Button, makeStyles, Theme } from '@material-ui/core';
+import { Button, makeStyles } from '@material-ui/core';
 import React, { FC, ReactNode } from 'react';
 
 const useStyles = makeStyles({
   button: {
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    width: 120,
+    border: '2px solid rgba(225, 225, 225, 0.5)',
+    borderRadius: 20,
+    width: 150,
     fontSize: '0.9rem',
-    fontWeight: 400,
-    letterSpacing: '0.06em',
+    fontWeight: 500,
+    letterSpacing: '0.1em',
+    padding: 8,
     transition: '0.6s all',
     '&:hover': {
       boxShadow: '0px 0px 2px 1px (0, 0, 0, 0.1)',
-      transition: '1.2s all ease-out'
+      transition: '.9s all ease-out'
     }
   }
 });
