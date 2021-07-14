@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Link, IconButton, Tooltip, makeStyles } from '@material-ui/core';
+import { IconButton, Link, makeStyles, Tooltip } from '@material-ui/core';
 import React from 'react';
 
 const useStyles = makeStyles((theme) => ({
@@ -9,7 +9,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const FontawesomeButton = ({ tech, title, url }) => {
+interface IProps {
+  // * come back to this! *
+  tech: any;
+  title: string;
+  url: string;
+}
+
+const FontawesomeButton = ({ tech, title, url }: IProps): JSX.Element => {
   const classes = useStyles();
   return (
     <Tooltip title={title}>
