@@ -24,7 +24,7 @@ interface IProps {
   children: ReactNode;
 }
 
-const ProjectButton: FC<IProps> = ({ link, children }) => {
+const ProjectButton = ({ link, children }: IProps): JSX.Element => {
   const classes = useStyles();
 
   const handleClick = () => {
