@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     border: '2px solid rgba(225, 225, 225, 0.5)',
     borderRadius: 20,
     width: 150,
-    fontSize: '0.9rem',
+    fontSize: '1rem',
     fontWeight: 500,
     letterSpacing: '0.1em',
     padding: 8,

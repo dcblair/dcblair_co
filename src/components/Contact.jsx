@@ -89,8 +89,20 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(3)
   },
   submit: {
-    width: 120,
-    alignSelf: 'center'
+    alignSelf: 'center',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    border: '2px solid rgba(225, 225, 225, 0.5)',
+    borderRadius: 20,
+    width: 160,
+    fontSize: '1rem',
+    fontWeight: 600,
+    letterSpacing: '0.12em',
+    padding: 8,
+    transition: '0.6s all',
+    '&:hover': {
+      boxShadow: '0px 0px 2px 1px (0, 0, 0, 0.1)',
+      transition: '.9s all ease-out'
+    }
   }
 }));
 
