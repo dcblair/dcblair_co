@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 type ProjectCardProps = {
-  // children: JSX.Element | JSX.Element[];
   children: ReactNode;
   className: string[];
 };
