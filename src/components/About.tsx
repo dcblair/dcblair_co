@@ -1,5 +1,5 @@
 import { Avatar, Card, makeStyles, Typography } from '@material-ui/core';
-import React from 'react';
+import * as React from 'react';
 import Profile from '../assets/profile_500.png';
 import FadeSpring from './FadeSpring';
 import FontawesomeButton from './FontawesomeButton';

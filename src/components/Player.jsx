@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { IconButton, makeStyles } from '@material-ui/core';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline';
@@ -27,13 +27,19 @@ const Player = () => {
 
   return (
     <div className={classes.root}>
-      { isPlaying ? (
+      {isPlaying ? (
         <IconButton>
-          <PauseCircleOutlineIcon className={classes.icons} onClick={() => setIsPlaying(false)} />
+          <PauseCircleOutlineIcon
+            className={classes.icons}
+            onClick={() => setIsPlaying(false)}
+          />
         </IconButton>
       ) : (
         <IconButton>
-          <PlayCircleOutlineIcon className={classes.icons} onClick={() => setIsPlaying(true)} />
+          <PlayCircleOutlineIcon
+            className={classes.icons}
+            onClick={() => setIsPlaying(true)}
+          />
         </IconButton>
       )}
     </div>

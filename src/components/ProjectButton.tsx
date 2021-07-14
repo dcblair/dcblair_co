@@ -1,5 +1,5 @@
 import { Button, makeStyles } from '@material-ui/core';
-import React, { FC, ReactNode } from 'react';
+import * as React from 'react';
 
 const useStyles = makeStyles({
   button: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 interface IProps {
   link: string;
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const ProjectButton = ({ link, children }: IProps): JSX.Element => {
