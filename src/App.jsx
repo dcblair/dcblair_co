@@ -5,7 +5,7 @@ import {
   ThemeProvider,
   Toolbar
 } from '@material-ui/core';
-import React from 'react';
+import * as React from 'react';
 // import Player from './components/Player';
 import BackToTop from './components/BackToTop';
 import Footer from './components/Footer';

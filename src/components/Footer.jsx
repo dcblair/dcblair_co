@@ -1,9 +1,5 @@
-import React from 'react';
-import {
-  Grid,
-  Link,
-  makeStyles
-} from '@material-ui/core';
+import * as React from 'react';
+import { Grid, Link, makeStyles } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
@@ -64,12 +60,12 @@ const Footer = () => {
           target="_blank"
           className={classes.linkedLink}
         >
-          <LinkedInIcon className={classes.linkedIn} style={{ marginRight: '.2rem' }} />
+          <LinkedInIcon
+            className={classes.linkedIn}
+            style={{ marginRight: '.2rem' }}
+          />
         </Link>
-        <Link
-          href="https://github.com/dcblair"
-          target="_blank"
-        >
+        <Link href="https://github.com/dcblair" target="_blank">
           <GitHubIcon
             className={classes.gitHub}
             fontSize="med"

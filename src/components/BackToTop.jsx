@@ -1,13 +1,8 @@
-import React from 'react';
-import {
-  Fab,
-  makeStyles,
-  useScrollTrigger,
-  Zoom
-} from '@material-ui/core';
+import * as React from 'react';
+import { Fab, makeStyles, useScrollTrigger, Zoom } from '@material-ui/core';
 import { KeyboardArrowUp as KeyboardArrowUpIcon } from '@material-ui/icons';
 
-const useStyles = makeStyles(({
+const useStyles = makeStyles({
   backtop: {
     color: 'rgba(226, 254, 254, .2)',
     position: 'fixed',
@@ -15,7 +10,7 @@ const useStyles = makeStyles(({
     right: 10,
     zIndex: 0
   }
-}));
+});
 
 const BackToTop = () => {
   const classes = useStyles();
@@ -33,7 +28,11 @@ const BackToTop = () => {
 
   return (
     <Zoom in={trigger}>
-      <div onClick={handleClick} role="presentation" className={classes.backtop}>
+      <div
+        onClick={handleClick}
+        role="presentation"
+        className={classes.backtop}
+      >
         <Fab background="(gba(226, 254, 254, .2)">
           <KeyboardArrowUpIcon />
         </Fab>

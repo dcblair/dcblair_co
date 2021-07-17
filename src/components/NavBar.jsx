@@ -1,5 +1,5 @@
 import { AppBar, makeStyles, Toolbar, Typography } from '@material-ui/core';
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { noto } from '../theme';
 import ScrollHandler from './ScrollHandler';

@@ -1,12 +1,12 @@
 import { Button, makeStyles } from '@material-ui/core';
-import React, { FC, ReactNode } from 'react';
+import * as React from 'react';
 
 const useStyles = makeStyles({
   button: {
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
     border: '2px solid rgba(225, 225, 225, 0.5)',
     borderRadius: 20,
-    width: 150,
+    width: 130,
     fontSize: '0.9rem',
     fontWeight: 500,
     letterSpacing: '0.1em',
@@ -21,7 +21,7 @@ const useStyles = makeStyles({
 
 interface IProps {
   link: string;
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 const ProjectButton = ({ link, children }: IProps): JSX.Element => {
